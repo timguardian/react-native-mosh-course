@@ -1,24 +1,10 @@
 import React from "react";
-import { StyleSheet, View, Text } from "react-native";
-import { MaterialCommunityIcons } from "@expo/vector-icons";
-import AppText from "./app/components/AppText";
+import { StyleSheet } from "react-native";
+
+import ViewImageScreen from "./app/screens/ViewImageScreen";
 
 export default function App() {
-  return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <AppText>Some text here</AppText>
-    </View>
-  );
+  return <ViewImageScreen />;
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-});
+const styles = StyleSheet.create({});

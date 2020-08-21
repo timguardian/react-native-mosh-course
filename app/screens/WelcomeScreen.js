@@ -8,10 +8,12 @@ import {
   SafeAreaView,
   TouchableOpacity,
 } from "react-native";
+import AppButton from "../components/AppButton";
 
 export default function WelcomeScreen() {
   return (
     <ImageBackground
+      blurRadius={10}
       source={require("../assets/background.jpg")}
       style={styles.imgBg}
     >
@@ -21,15 +23,16 @@ export default function WelcomeScreen() {
             source={require("../assets/logo-red.png")}
             style={styles.logoImg}
           />
-          <Text>Some text</Text>
+          <Text style={styles.txtLogoCaption}>UselessStaffApp</Text>
         </View>
         <View style={styles.btnContainer}>
-          <TouchableOpacity style={[styles.btn, styles.lightBtn]}>
-            <Text style={styles.btnTxt}>Button 1</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={[styles.btn, styles.darkBtn]}>
-            <Text style={styles.btnTxt}>Button 2</Text>
-          </TouchableOpacity>
+          <AppButton
+            title="Login"
+            onPress={() => {
+              console.log("Pressed");
+            }}
+          />
+          <AppButton title="Register" color="secondary" />
         </View>
       </View>
     </ImageBackground>
@@ -55,18 +58,11 @@ const styles = StyleSheet.create({
   btnContainer: {
     flex: 1,
     justifyContent: "flex-end",
+    paddingHorizontal: 10,
   },
-  btn: {
-    width: "100%",
-    padding: 15,
-  },
-  btnTxt: {
-    textAlign: "center",
-  },
-  lightBtn: {
-    backgroundColor: "#fc5c65",
-  },
-  darkBtn: {
-    backgroundColor: "#4ECDC4",
+  txtLogoCaption: {
+    fontSize: 25,
+    fontWeight: "600",
+    paddingVertical: 20,
   },
 });
