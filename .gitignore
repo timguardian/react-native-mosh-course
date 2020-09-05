@@ -10,5 +10,6 @@ npm-debug.*
 web-build/
 .vscode/
 
+jsconfig.json
 # macOS
 .DS_Store

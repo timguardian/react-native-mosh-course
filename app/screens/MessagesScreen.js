@@ -43,6 +43,7 @@ export default function MessagesScreen() {
             renderRightActions={() => (
               <ListItemDeleteAction onPress={() => handleDelete(item)} />
             )}
+            showChevrons={true}
           />
         )}
         ItemSeparatorComponent={() => <ListItemSeparator />}
@@ -61,5 +62,3 @@ export default function MessagesScreen() {
     </Screen>
   );
 }
-
-const styles = StyleSheet.create({});
